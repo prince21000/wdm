@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'Id' => 'ID',
+    'Ad_category_id' => '广告位ID',
+    'Title' => '标题',
+    'Image' => '图片',
+    'Type' => '类型',
+    'Type 1' => '无',
+    'Type 2' => '图文详情',
+    'Type 3' => '公众号文章',
+    'Type 4' => '章节题库',
+    'Type 5' => '院校详情',
+    'Path' => '路径',
+    'Detail_id' => '关联数据',
+    'Content' => '内容',
+    'Status' => '状态',
+    'Status 1' => '启用',
+    'Status 2' => '禁用',
+    'Createtime' => '创建时间',
+    'Updatetime' => '更新时间',
+    'Deletetime' => '删除时间',
+    'Category.name' => '名称',
+    'School.name' => '院校名称',
+    'Exam_type_id' => '备考类型',
+    'Category_id' => '科目-版本-章节',
+];

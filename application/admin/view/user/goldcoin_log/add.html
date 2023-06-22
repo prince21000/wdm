@@ -1,0 +1,82 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-type" data-rule="required" min="0" class="form-control selectpicker" name="row[type]">
+                {foreach name="typeList" item="vo"}
+                    <option value="{$key}" {in name="key" value=""}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" min="0" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_answer_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_answer_id" min="0" data-rule="required" data-source="user/answer/index" class="form-control selectpage" name="row[user_answer_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_clocking_record_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_clocking_record_id" min="0" data-rule="required" data-source="user/clocking/record/index" class="form-control selectpage" name="row[user_clocking_record_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_share_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_share_id" min="0" data-rule="required" data-source="user/share/index" class="form-control selectpage" name="row[user_share_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_doumi_market_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_doumi_market_id" min="0" data-rule="required" data-source="user/doumi/market/index" class="form-control selectpage" name="row[user_doumi_market_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Material_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-material_id" min="0" data-rule="required" data-source="material/index" class="form-control selectpage" name="row[material_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Score')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-score" data-rule="required" class="form-control" name="row[score]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Before')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-before" data-rule="required" class="form-control" name="row[before]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('After')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-after" data-rule="required" class="form-control" name="row[after]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Memo')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-memo" class="form-control" name="row[memo]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

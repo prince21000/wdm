@@ -1,0 +1,64 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-type" data-rule="required" min="0" class="form-control selectpicker" name="row[type]">
+                {foreach name="typeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.type"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" min="0" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="{$row.user_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Exam_question_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-exam_question_id" min="0" data-rule="required" data-source="exam/question/index" class="form-control selectpage" name="row[exam_question_id]" type="text" value="{$row.exam_question_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-title" class="form-control " rows="5" name="row[title]" cols="50">{$row.title|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Option')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-option" class="form-control " rows="5" name="row[option]" cols="50">{$row.option|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Right_option')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-right_option" class="form-control" name="row[right_option]" type="text" value="{$row.right_option|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('School_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-school_id" min="0" data-rule="required" data-source="school/index" class="form-control selectpage" name="row[school_id]" type="text" value="{$row.school_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Material_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-material_id" min="0" data-rule="required" data-source="material/index" class="form-control selectpage" name="row[material_id]" type="text" value="{$row.material_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

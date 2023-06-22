@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'Id' => '优惠券ID',
+    'Name' => '优惠券名称',
+    'Timelimit_type' => '使用时间限制类型',
+    'Timelimit_type 1' => '获得后多少天内有效',
+    'Timelimit_type 2' => '指定时间段内可用',
+    'Validday' => '有效天数',
+    'Starttime' => '使用开始时间',
+    'Endtime' => '使用结束时间',
+    'Discount_way' => '优惠方式',
+    'Discount_way 1' => '立减',
+    'Discount_way 2' => '满减',
+    'Discount_way 3' => '打折',
+    'Enough' => '消费满多少,0表示不限',
+//    'Deduct' => '抵扣金额（立减或满减）',
+    'Deduct' => '抵扣金额',
+    'Discount' => '折扣百分比',
+    'Total_num' => '优惠券发放总数',
+    'Surplus_num' => '剩余数量',
+    'Receive_num' => '领取数量',
+    'Exchange_goldcoin' => '兑换所需金币数量',
+    'Weigh' => '权重',
+    'Status' => '状态',
+    'Status 1' => '启用',
+    'Status 2' => '禁用',
+    'Createtime' => '创建时间',
+    'Updatetime' => '更新时间',
+    'Deletetime' => '删除时间'
+];
